@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.primer.WeaponsController">
+    <children>
+        <AnchorPane layoutY="6.0" prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#Add_weapons" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: green;" text="Добавить" />
+                <Button layoutX="24.0" layoutY="376.0" mnemonicParsing="false" onAction="#Edit" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Обновить" />
+                <Button layoutX="24.0" layoutY="430.0" mnemonicParsing="false" onAction="#Delete" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Удалить" />
+                <TextField fx:id="txt_id_pavilion" layoutX="24.0" layoutY="60.0" prefHeight="30.0" prefWidth="180.0" promptText="ID павильона" />
+                <TextField fx:id="txt_name_weapon" layoutX="24.0" layoutY="110.0" prefHeight="30.0" prefWidth="180.0" promptText="Название" />
+                <TextField fx:id="txt_year_weapon" layoutX="24.0" layoutY="159.0" prefHeight="30.0" prefWidth="180.0" promptText="Год выпуска" />
+                <TextField fx:id="txt_kalibr_weapon" layoutX="24.0" layoutY="207.0" prefHeight="30.0" prefWidth="180.0" promptText="Калибр" />
+                <TextField fx:id="txt_id" layoutX="24.0" layoutY="21.0" prefHeight="23.0" prefWidth="180.0" promptText="ID оружия" />
+            <Button fx:id="Back_button" layoutX="24.0" layoutY="496.0" mnemonicParsing="false" onAction="#Add_weapons" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: white;" text="Выйти" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="table_weapons" layoutX="228.0" layoutY="76.0" onMouseClicked="#getSelected" prefHeight="474.0" prefWidth="469.0">
+            <columns>
+                <TableColumn fx:id="col_id_weapon" prefWidth="75.0" text="ID оружия" />
+                <TableColumn fx:id="col_id_pavilion" prefWidth="100.0" text="ID павильона" />
+                <TableColumn fx:id="col_name_weapon" prefWidth="85.0" text="Название" />
+                <TableColumn fx:id="col_year_weapon" prefWidth="100.0" text="Год выпуска" />
+                <TableColumn fx:id="col_kalibr_weapon" prefWidth="107.0" text="Калибр" />
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Поиск" />
+    </children>
+</AnchorPane>

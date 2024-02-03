@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.primer.PavilionsController">
+    <children>
+        <AnchorPane layoutY="6.0" prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#Add_Pavilions" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: green;" text="Добавить" />
+                <Button layoutX="24.0" layoutY="376.0" mnemonicParsing="false" onAction="#Edit" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Обновить" />
+                <Button layoutX="24.0" layoutY="430.0" mnemonicParsing="false" onAction="#Delete" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Удалить" />
+                <TextField fx:id="txt_name_pavilion" layoutX="24.0" layoutY="110.0" prefHeight="30.0" prefWidth="180.0" promptText="Название" />
+                <TextField fx:id="txt_id_pavilion" layoutX="24.0" layoutY="21.0" prefHeight="23.0" prefWidth="180.0" promptText="ID павильона" />
+            <Button fx:id="Back_button" layoutX="24.0" layoutY="496.0" mnemonicParsing="false" onAction="#Add_Pavilions" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: white;" text="Выйти" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="table_pavilions" layoutX="236.0" layoutY="61.0" onMouseClicked="#getSelected" prefHeight="474.0" prefWidth="461.0">
+            <columns>
+                <TableColumn fx:id="col_id_pavilion" prefWidth="100.0" text="ID павильона" />
+                <TableColumn fx:id="col_name_pavilion" prefWidth="359.9999084472656" text="Название" />
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Поиск" />
+    </children>
+</AnchorPane>
